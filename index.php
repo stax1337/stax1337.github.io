@@ -8,7 +8,7 @@ const ABOBA_URL = 'https://holidayapi.com/v1/holidays?pretty&language=ru&country
 
 $update = json_decode(file_get_contents('php://input'));
 
-file_put_contents(__DIR__ . '/logs.txt', print_r($update, 1), FILE_APPEND); ЛОГ - ФАЙЛ
+file_put_contents(__DIR__ . '/logs.txt', print_r($update, 1), FILE_APPEND);
 
 $chat_id = $update->message->chat->id ?? '';
 $text = $update->message->text ?? '';
